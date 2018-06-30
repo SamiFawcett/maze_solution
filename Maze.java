@@ -1,8 +1,9 @@
 public class Maze
 {
-    private Grid g; 
+    static Grid g; 
     private int HEIGHT;
     private int WIDTH;
+    private int solutions;
     
     public Maze(int HEIGHT, int WIDTH){
         this.HEIGHT = HEIGHT;
@@ -10,8 +11,11 @@ public class Maze
         this.g = new Grid(this.HEIGHT, this.WIDTH);
     }
     
+    static Grid getGrid(){
+        return g;
+    }
+    
     public static void main(String[] args){
         Maze m = new Maze(100, 100);
-        
     }
 }
