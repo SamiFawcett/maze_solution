@@ -15,7 +15,10 @@ public class Maze
         return g;
     }
     
-    public static void main(String[] args){
+    public static void solve(){
         Maze m = new Maze(100, 100);
+        MazeFileReader mfr = new MazeFileReader(m.HEIGHT, m.WIDTH);
+        m.getGrid().draw();
     }
+    
 }
